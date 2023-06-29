@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Const com valores mutáveis</title>
+</head>
+<body>
+    <div class="container">
+        <p> <strong>Const</strong> descreve uma <strong>variável</strong>  que não pode ser <strong>reatribuída</strong> (com o operador de atribuição =). Depois de criá-la, não podemos fazer algo assim:</p>
+        <p>
+        const nome = 'luiz';<br>
+        nome = 'joão'; // Erro: Assignment to constant variable.
+        </p>
+        <p>
+            Porém, existe uma diferença entre variável e valor.
+        </p>
+        <p>
+            Variáveis são como <strong>um apelido para um valor</strong>, uma espécie de alias para mencionar algum valor salvo na memória.
+        </p>
+        <p>
+            Já valores são os dados que realmente ficam salvos na memória e sustentam determinado tipo. Alguns tipos de valores <strong>são imutáveis</strong> , como number, string, boolean, undefined, null, symbol e bigint (os primitivos todos são imutáveis). Outros tipos são mutáveis, como arrays e objetos (objetos em geral são mutáveis, com exceção de null).
+        </p>
+        <p>
+            Valores mutáveis geralmente são estruturas de dados mais complexas que sustentam outros valores ou comportamentos internamente. Como é o caso do array, que pode ser composto por vários outros tipos de dados.
+        </p>
+        <p>
+            Quando usamos const com tipos primitivos, esse valor nunca mais poderá ser alterado. Nesse caso, além de const não permitir reatribuição, o valor também é imutável (consequentemente, nunca podemos alterar essa constante).
+        </p>
+        <p>
+            Já quando usamos const com valores mutáveis (como arrays e objetos), a variável continua sendo constante, porém os valores dentro do objeto poderão ser alterados. Isso acontece porque quando alteramos um valor interno de um objeto, não ocorre a reatribuição da variável com sinal de atribuição = (a variável continua apontando para o mesmo local na memória), apenas a alteração de um valor interno do mesmo objeto.
+        </p>
+        <p>
+            Por este motivo, pode-se usar const com objetos mutáveis e ainda assim alterar seus valores internos. A única coisa que não vamos conseguir fazer é reatribuir o valor da variável.
+        </p>
+        <p>
+            Exemplos:
+        </p>
+        <h2>Isso pode</h2>
+        <p>
+            const array = [1, 2, 3, 4, 5];<br>
+            array.pop();<br>
+            array[0] = 1024;<br>
+            console.log(array); // [ 1024, 2, 3, 4 ]
+        </p>
+        <h2>Isso NÃO pode</h2>
+        <p>
+            const array = [1, 2, 3, 4, 5];<br>
+            array = 'Legal'; // Assignment to constant variable
+        </p>
+    </div>
+            
+
+
+        </p>
+    
+</body>
+</html>
