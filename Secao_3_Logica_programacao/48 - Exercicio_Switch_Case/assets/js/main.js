@@ -31,7 +31,7 @@ formataDiaTexto=(data)=>{
             return diaTexto = '';
     }
 }
-*/
+
 //outra forma de fazer
 formataDiaTexto=(data)=>{
     let dia = data.getDay();
@@ -41,7 +41,7 @@ formataDiaTexto=(data)=>{
     return diaTexto[dia];
 }
 //irá receber a data e irá retornar o mes em texto
-/*
+
 formataMesTexto=(data)=>{
     let mes = data.getMonth();
     let mesTexto;
@@ -74,7 +74,7 @@ formataMesTexto=(data)=>{
             return mesTexto = '';
     }
 }
-*/
+
 //outra de forma de fazer utilizando array
 formataMesTexto=(data)=>{
     let mes = data.getMonth();
@@ -97,7 +97,7 @@ formataData=(data)=>{
 
     return `${diaTexto}, ${diaNum} de ${mesTexto} de ${ano} ${hora}:${min}`
 }
-
+*/
 //cria um paragrafo na pagina
 let p = document.createElement('p');
 
@@ -105,7 +105,12 @@ let p = document.createElement('p');
 p.classList.add('paragrafo');
 
 //adiciona dentro do paragrafo o texto retornado pela funcao
-p.innerHTML = formataData(data);
+//p.innerHTML = formataData(data);
+
+//Utilizando uma funçao do javaScript para fazer todo o trabalho
+const data2 = new Date(); 
+
+p.innerText = data.toLocaleDateString('pt-BR',{dateStyle:'full'})+' '+data.getHours()+':'+data.getMinutes();
 
 //adiciona o paragrafo criado dentro da div 'resultado'
 textoData.appendChild(p);
