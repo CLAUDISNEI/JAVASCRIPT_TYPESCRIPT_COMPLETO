@@ -6,6 +6,8 @@ let textoData = document.querySelector('#resultado');
 const data = new Date('2019-10-7 22:52:00')
 
 //funcao que irá receber a data e retornará o dia da semana em texto
+
+/*
 formataDiaTexto=(data)=>{
     let dia = data.getDay();
     let diaTexto='';
@@ -29,8 +31,17 @@ formataDiaTexto=(data)=>{
             return diaTexto = '';
     }
 }
+*/
+//outra forma de fazer
+formataDiaTexto=(data)=>{
+    let dia = data.getDay();
 
+    let diaTexto= [ 'Domingo', 'Segunda-Feira', 'Terça-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-Feira', 'Sábado'];
+
+    return diaTexto[dia];
+}
 //irá receber a data e irá retornar o mes em texto
+/*
 formataMesTexto=(data)=>{
     let mes = data.getMonth();
     let mesTexto;
@@ -63,13 +74,24 @@ formataMesTexto=(data)=>{
             return mesTexto = '';
     }
 }
+*/
+//outra de forma de fazer utilizando array
+formataMesTexto=(data)=>{
+    let mes = data.getMonth();
+    let mesTexto = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+    return mesTexto[mes];
+}
 
+//funcao que irá retornar um número menor de 10 com zero na frente
+zeroAEsquerda=(num)=>{
+    return num >=10 ? num : `0${num}`
+}
 //receberá a data e com auxilio das outras funcoes irá retornar o texto formatado na página
 formataData=(data)=>{
-    let ano = data.getFullYear();
-    let hora = data.getHours();
-    let min = data.getMinutes();
-    let diaNum = data.getDate();
+    let ano = zeroAEsquerda(data.getFullYear());
+    let hora = zeroAEsquerda(data.getHours());
+    let min = zeroAEsquerda(data.getMinutes());
+    let diaNum = zeroAEsquerda(data.getDate());
     let diaTexto = formataDiaTexto(data);
     let mesTexto = formataMesTexto(data);
 
