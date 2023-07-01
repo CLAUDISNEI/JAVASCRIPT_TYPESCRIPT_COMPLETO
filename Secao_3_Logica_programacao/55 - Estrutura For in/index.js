@@ -22,3 +22,4 @@ for( let chave in pessoa){
     console.log('for in objeto: ',chave, pessoa[chave])
 }
 
+
