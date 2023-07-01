@@ -19,4 +19,3 @@ for (let i = 0; i < elementos.length; i++) {
     let el = criarElementos(tag,texto);
     result.appendChild(el);
 }
-
