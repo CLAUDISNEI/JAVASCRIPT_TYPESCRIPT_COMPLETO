@@ -11,9 +11,9 @@ const backgroundColorBody = estilosBody.background;
 //     el.style.background = 'blue';
 // })
 
-for(let el of paragrafos){
-   console.log(el);
-}
+// for(let el of paragrafos){
+//    console.log(el);
+// }
 
 //passamos a cor que está armazenada em backgroundColorBody para todos os paragrafos.
 for (let el of paragrafos){
