@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap');
+
+:root{
+    --primary-color: rgb(13,106,134);
+    --primary-color-darker: rgb(9,48,56);
+    --primary-color-active: rgb(230, 241, 25);
+}
+*{
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 300px;
+    min-height: 150px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+form input, form label, form button{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input{
+    font-size: 24px;
+    height: 50px;
+    padding: 0 20px;
+}
+
+form input:focus{
+    outline: 1px solid var(--primary-color);
+}
+
+form button{
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+form button:hover{
+    background: var(--primary-color-darker);
+}
+form button:active{
+    background: var(--primary-color-active)
+}
+
+container .row .col{
+    padding: 1px;
+}
+
+.comImc{
+    background-color: var(--primary-color-active);
+    height: 50px;
+    font-size: 18px;
+}
+
+.paragrafo-resultado{
+    background: #93eb8e;
+    padding: 10px 20px;
+}
+
+.bad{
+    background: #e66b6b;
+    padding: 10px 20px;
+}
+
+#resultado{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    font-family:'Courier New', Courier, monospace;
+    height: 90px;
+    font-size:  2em;
+    color: #131212;
+}
+
+h1{
+    font-size: 2 rem ;
+}
+
+#resultado h1 strong{
+    font-size:  2em;
+}
+
+.botoes{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+
+button{
+    width: 80px;
+    height: 30px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    outline: #131212;
+    cursor: pointer;
+    background: #72ee6c;
+    border-color: #93eb8e;
+    
+}
+
+.pausar{
+    color: #e66b6b;
+}
+
+.iniciarReiniciar{
+    color:#131212
+}
+
+
+
+
