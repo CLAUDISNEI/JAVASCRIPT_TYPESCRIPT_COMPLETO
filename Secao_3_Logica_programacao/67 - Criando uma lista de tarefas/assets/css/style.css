@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap');
+
+:root{
+    --primary-color: rgb(13,106,134);
+    --primary-color-darker: rgb(9,48,56);
+    --primary-color-active: rgb(230, 241, 25);
+}
+*{
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: column;
+    max-width: 600px;
+    min-height: 150px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+input:focus{
+    outline: 1px solid var(--primary-color);
+}
+
+button{
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+button:hover{
+    background: var(--primary-color-darker);
+}
+button:active{
+    background: var(--primary-color-active)
+}
+
+container .row .col{
+    padding: 1px;
+}
+
+
+#resultado{
+    display: flex;
+    flex-direction:row;
+    font-family:'Courier New', Courier, monospace;
+    height: 90px;
+    font-size:  2em;
+    color: #131212;
+}
+
+h1{
+    font-size: 2 rem ;
+}
+
+button{
+    width: 150px;
+    height: 30px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    outline: #131212;
+    cursor: pointer;
+    background: #72ee6c;
+    border-color: #93eb8e;
+    
+}
+
+
+
+
+
