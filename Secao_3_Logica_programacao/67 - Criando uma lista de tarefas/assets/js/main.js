@@ -67,7 +67,7 @@ const limparInput=()=>{
 }
 
 //funcão que irá pegar o conteúdo do input e criar a tarefa
-const criaTarefa=(textoInput)=>{
+const criaTarefa=(texto)=>{
     //verificando se há texto do input e parando caso não tenha
     if(!inputTarefa){
         alert('Preencha o input de tarefas');
@@ -79,7 +79,7 @@ const criaTarefa=(textoInput)=>{
 
     //depois iremos adicionar o texto do input dentro do li com
     //innerText
-    li.innerText = textoInput;
+    li.innerText = texto;
 
     //adicionando o li criando dentro da ul utilizando o 
     //appendChild()
